@@ -1,0 +1,18 @@
+<scroll-view class='container' scroll-y="true" lower-threshold="5" bindscrolltolower="lower">
+  <block wx:for="{{jokesData}}" wx:key="">
+    <view class='feed-item'>
+      <view class='feed-source'>
+        <view class='avatar'>
+          <image src='{{item.profile_image}}'></image>
+        </view>
+        <text>{{item.name}}</text>
+        <text class='item-more'>{{item.create_time}}</text>
+      </view>
+      <view class='feed-content'>
+       <view class='question'> 
+       <image mode='aspectFill' data-imgUrl="{{item.image0}}" src='{{item.image0}}' bindtap='previewImg'></image>
+       </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
